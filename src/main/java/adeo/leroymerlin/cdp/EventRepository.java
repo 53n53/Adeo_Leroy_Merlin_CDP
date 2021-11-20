@@ -11,4 +11,6 @@ public interface EventRepository extends Repository<Event, Long> {
     void delete(Long eventId);
 
     List<Event> findAllBy();
+
+    Event save(Event event);
 }

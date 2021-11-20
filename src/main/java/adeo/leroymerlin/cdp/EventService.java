@@ -23,6 +23,10 @@ public class EventService {
         eventRepository.delete(id);
     }
 
+    public Event upsertEvent(Event event) {
+        return eventRepository.save(event);
+    }
+
     public List<Event> getFilteredEvents(String query) {
         List<Event> events = eventRepository.findAllBy();
         // Filter the events list in pure JAVA here
