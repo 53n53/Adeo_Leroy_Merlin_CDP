@@ -15,6 +15,10 @@ public class Band {
     @OneToMany(fetch=FetchType.EAGER)
     private Set<Member> members;
 
+    public Long getId() {
+        return id;
+    }
+
     public Set<Member> getMembers() {
         return members;
     }
